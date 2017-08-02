@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/the_answers_are_all_right_here"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -26,7 +26,7 @@
     <ImageView
         android:id="@+id/image8Ball"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_below="@id/mantra"
         android:contentDescription="@string/magic_8_ball_image"
         android:src="@drawable/ball1"/>
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/image8Ball"
         android:layout_centerHorizontal="false"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#3f51b5"
         android:text="@string/ask_for_wisdom"
         android:textColor="#ffffff"/>
