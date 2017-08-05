@@ -10,9 +10,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Random randomInt;
-    int answer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,21 +28,24 @@ public class MainActivity extends AppCompatActivity {
     private void setup() {
 
         Button askBtn = (Button) findViewById(R.id.askBtn);
-        final ImageView eightBallImage = (ImageView) findViewById(R.id.image8Ball);
-
-        final int[] wisdom = {
-                R.drawable.ball1,
-                R.drawable.ball2,
-                R.drawable.ball3,
-                R.drawable.ball4,
-                R.drawable.ball5
-        };
-
-        randomInt = new Random();
 
         askBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int answer;
+
+                int[] wisdom = {
+                        R.drawable.ball1,
+                        R.drawable.ball2,
+                        R.drawable.ball3,
+                        R.drawable.ball4,
+                        R.drawable.ball5
+                };
+
+                ImageView eightBallImage = (ImageView) findViewById(R.id.image8Ball);
+
+                Random randomInt = new Random();
+
                 answer = wisdom[randomInt.nextInt(4)];
                 eightBallImage.setImageResource(answer);
                 eightBallImage.setTag(answer);
